@@ -64,7 +64,7 @@
 \usepackage{centernot}
 
 \usepackage[backend=biber,style=bwl-FU,natbib=true,doi=false,isbn=false,url=false,eprint=false]{biblatex}
-\addbibresource{econometrics.bib}
+\IfFileExists{econometrics.bib}{\addbibresource{econometrics.bib}}{}
 
 % Mise en page de l'A4
 \usepackage{enumitem}
@@ -909,7 +909,7 @@ Puisque $MX=0$, a fortiori on doit avoir $MX_1=0$ et donc un biais nul. On montr
 
   \begin{figure}
     \centering
-    \scalebox{.42}{\input{../pgf/chapitre-2/biais-variable-omise.tex}}
+    \scalebox{.42}{\IfFileExists{../pgf/chapitre-2/biais-variable-omise.tex}{\input{../pgf/chapitre-2/biais-variable-omise.tex}}{\fbox{\scriptsize Figure externe indisponible : \texttt{../pgf/chapitre-2/biais-variable-omise.tex}}}}
     \caption{$\log w = 0{,}09\,educ + 0{,}05\,talent + \varepsilon$, calibré sur
       l'équation de salaire du \chapref{1}{I}~; on estime le modèle sans le talent,
       sur $4000$ échantillons de $100$ individus. Le biais vaut
@@ -949,7 +949,7 @@ Puisque $MX=0$, a fortiori on doit avoir $MX_1=0$ et donc un biais nul. On montr
 
   \begin{figure}
     \centering
-    \scalebox{.34}{\input{../pgf/chapitre-2/normalite-asymptotique-bhat.tex}}
+    \scalebox{.34}{\IfFileExists{../pgf/chapitre-2/normalite-asymptotique-bhat.tex}{\input{../pgf/chapitre-2/normalite-asymptotique-bhat.tex}}{\fbox{\scriptsize Figure externe indisponible : \texttt{../pgf/chapitre-2/normalite-asymptotique-bhat.tex}}}}
     \caption{Erreurs log-normales centrées, donc fortement asymétriques~; $30000$
       échantillons. En bleu la distribution de $\hat b_1$ centré réduit, en rouge la
       densité normale centrée réduite. À $T=5$ l'asymétrie vaut $-2{,}6$ et le kurtosis
@@ -1012,7 +1012,7 @@ Puisque $MX=0$, a fortiori on doit avoir $MX_1=0$ et donc un biais nul. On montr
 
   \begin{figure}
     \centering
-    \scalebox{.34}{\input{../pgf/chapitre-2/tcl.tex}}
+    \scalebox{.34}{\IfFileExists{../pgf/chapitre-2/tcl.tex}{\input{../pgf/chapitre-2/tcl.tex}}{\fbox{\scriptsize Figure externe indisponible : \texttt{../pgf/chapitre-2/tcl.tex}}}}
     \caption{Les $X_i$ suivent une loi exponentielle de paramètre $1$, très
       asymétrique et bornée à gauche. En bleu la distribution de
       $\sqrt n\,(\bar X - \mu)$ sur $50000$ répétitions, en rouge la densité normale
@@ -1161,7 +1161,7 @@ plus générale consiste à utiliser la fonction caractéristique.
   \framesubtitle{Ce que la corrélation fait à la précision}
 
   \begin{center}
-    \scalebox{.72}{\input{../tikz/chapitre-2/multicolinearite-variance.tex}}
+    \scalebox{.72}{\IfFileExists{../tikz/chapitre-2/multicolinearite-variance.tex}{\input{../tikz/chapitre-2/multicolinearite-variance.tex}}{\fbox{\scriptsize Figure externe indisponible : \texttt{../tikz/chapitre-2/multicolinearite-variance.tex}}}}
   \end{center}
 
   \medskip
@@ -1177,7 +1177,7 @@ plus générale consiste à utiliser la fonction caractéristique.
   \framesubtitle{Ce que la corrélation fait à la région de confiance}
 
   \begin{center}
-    \scalebox{.62}{\input{../tikz/chapitre-2/multicolinearite-ellipse.tex}}
+    \scalebox{.62}{\IfFileExists{../tikz/chapitre-2/multicolinearite-ellipse.tex}{\input{../tikz/chapitre-2/multicolinearite-ellipse.tex}}{\fbox{\scriptsize Figure externe indisponible : \texttt{../tikz/chapitre-2/multicolinearite-ellipse.tex}}}}
   \end{center}
 
   \medskip
@@ -1276,7 +1276,7 @@ plus générale consiste à utiliser la fonction caractéristique.
 
   \begin{figure}
     \centering
-    \scalebox{.34}{\input{../pgf/chapitre-2/erreurs-non-spheriques.tex}}
+    \scalebox{.34}{\IfFileExists{../pgf/chapitre-2/erreurs-non-spheriques.tex}{\input{../pgf/chapitre-2/erreurs-non-spheriques.tex}}{\fbox{\scriptsize Figure externe indisponible : \texttt{../pgf/chapitre-2/erreurs-non-spheriques.tex}}}}
     \caption{À gauche des erreurs sphériques, de dispersion constante. Au centre de
       l'hétéroscédasticité, la dispersion croissant avec $x$~: les termes diagonaux
       d'$\Omega$ ne sont pas constants. À droite un processus autorégressif d'ordre un,
@@ -1641,7 +1641,7 @@ en considérant les données transformées.\qed
 
   \begin{figure}
     \centering
-    \scalebox{.44}{\input{../pgf/chapitre-2/mcg-vs-mco.tex}}
+    \scalebox{.44}{\IfFileExists{../pgf/chapitre-2/mcg-vs-mco.tex}{\input{../pgf/chapitre-2/mcg-vs-mco.tex}}{\fbox{\scriptsize Figure externe indisponible : \texttt{../pgf/chapitre-2/mcg-vs-mco.tex}}}}
     \caption{$y_i = \beta_0 + \beta_1 x_i + \varepsilon_i$ avec
       $\mathbb V[\varepsilon_i]=\sigma^2 z_i^2$, $z$ observée et indépendante de $x$~;
       $20000$ échantillons de $40$ observations. Les deux estimateurs sont centrés sur
@@ -1800,7 +1800,7 @@ en considérant les données transformées.\qed
 
   \nocite{Schmidt1976}
 
-  \printbibliography
+  \IfFileExists{econometrics.bib}{\printbibliography}{}
 
 \end{notes}
 
