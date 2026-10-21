@@ -19,10 +19,10 @@ jobs:
       - name: Compiler le document
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: chapitre-1-a4.tex
+          root_file: chapitre-2-a4.tex
 
       - name: Recuperer le PDF
         uses: actions/upload-artifact@v6
         with:
-          name: chapitre-1-a4-pdf
-          path: chapitre-1-a4.pdf
+          name: chapitre-2-a4-pdf
+          path: chapitre-2-a4.pdf
