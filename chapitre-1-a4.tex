@@ -276,12 +276,21 @@
 %% ----------------------------------------------- Fiche récapitulative
 
 \newcommand{\rcpsec}[1]{%
-  \par\medskip{\sffamily\bfseries\color{csec}#1}\par\nobreak
-  \vspace{-2pt}{\color{csec}\hrule height 0.4pt}\par\nobreak\vspace{2pt}}
-\newcommand{\rcp}[2]{\par\vspace{2pt}\noindent{\bfseries\color{ctitle}#1}\ #2\par}
+  \par\medskip
+  \noindent{\sffamily\bfseries\color{csec}#1}\par
+  \nobreak\vspace{2pt}%
+  {\color{csec}\hrule height 0.4pt}%
+  \nobreak\vspace{4pt}%
+}
 
+\newcommand{\rcp}[2]{%
+  \par\vspace{2pt}%
+  \noindent{\bfseries\color{ctitle}#1}\ #2\par
+}
 \title{Économétrie\\\small{Les MCO quand tout va bien}}
-
+\author[S. Adjemian]{Stéphane Adjemian}
+\institute{\texttt{stephane.adjemian@univ-lemans.fr}}
+\date{Août 2026}
 
 \begin{document}
 
