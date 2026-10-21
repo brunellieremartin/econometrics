@@ -1,0 +1,28 @@
+
+name: Compile LaTeX
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '**.tex'
+      - '.github/workflows/compile-latex.yml'
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer le projet
+        uses: actions/checkout@v6
+
+      - name: Compiler le document
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: chapitre-1-a4.tex
+
+      - name: Recuperer le PDF
+        uses: actions/upload-artifact@v6
+        with:
+          name: chapitre-1-a4-pdf
+          path: chapitre-1-a4.pdf
